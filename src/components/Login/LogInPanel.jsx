@@ -49,14 +49,6 @@ const LogInPanel = (props) => {
         />
     )
 
-    if (!!props.userInfo) {
-        return (
-            <Alert variant={'success'} className='mt-5 h-100 text-center'>
-                Congratulations!!! You logged in your account!
-            </Alert>
-        )
-    }
-
     return (
         (props.isLogged)
             ? <Alert variant={'success'} className='mt-5 h-100 text-center'>

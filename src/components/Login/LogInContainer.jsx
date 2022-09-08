@@ -5,7 +5,6 @@ import { logInAccountAC, createAccountAC, checkLoginAC } from '../../redux/LogIn
 let mapStateToProps = (state) => {
     return {
         isLogged: state.logInPage.isLogged,
-        userInfo: state.logInPage.userInfo,
         createdAccount: state.logInPage.createdAccount,
     }
 }
