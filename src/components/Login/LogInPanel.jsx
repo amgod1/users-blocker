@@ -19,7 +19,7 @@ const LogInPanel = (props) => {
         const timer = setTimeout(() => {
             props.onCheckLogin()
             clearForms()
-        }, 500)
+        }, 1000)
         return () => clearTimeout(timer);
     }
   
