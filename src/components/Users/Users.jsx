@@ -47,7 +47,14 @@ const Users = (props) => {
 
         return (
             <Container>
-                <Table striped bordered hover responsive="lg" className='mt-5' variant={(props.theme) ? 'dark' : ''}>
+                <UsersButtons
+                    checkedUsers = {props.checkedUsers}
+                    onBlockUser = {props.onBlockUser}
+                    onUnblockUser = {props.onUnblockUser}
+                    onDeleteUser = {props.onDeleteUser}
+                    setCheck = { setCheck }
+                />
+                <Table striped bordered hover responsive="lg" className='mb-4' variant={(props.theme) ? 'dark' : ''}>
                     <thead>
                         <tr>
                             <th className='text-center'>
@@ -82,13 +89,6 @@ const Users = (props) => {
                         { renderUsers }
                     </tbody>
                 </Table>
-                <UsersButtons
-                    checkedUsers = {props.checkedUsers}
-                    onBlockUser = {props.onBlockUser}
-                    onUnblockUser = {props.onUnblockUser}
-                    onDeleteUser = {props.onDeleteUser}
-                    setCheck = { setCheck }
-                />
             </Container>
         )
     } else if (props.isLogged) {

@@ -22,7 +22,7 @@ const UsersButtons = (props) => {
     }
 
     return (
-        <div>
+        <div className='my-4'>
             <Button variant='warning' onClick={ blockUser }>
                 Block    
             </Button>
