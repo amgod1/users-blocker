@@ -45,7 +45,7 @@ const logInReducer = (state = initialState, action) => {
             return {...state}
         case CHECK_LOGIN:
             if (!!localStorage.login) {
-                return {...state, isLogged: 1}
+                return {...state, isLogged: 1, userInfo: localStorage.userInfo}
             } else return {...state}
         case LOG_OUT_ACCOUNT:
             localStorage.removeItem('userInfo')
