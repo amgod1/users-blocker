@@ -60,7 +60,11 @@ const User = (props) => {
             }>
                 { logDate }
             </th>
-            <th>
+            <th className={
+                props.blocked === 0
+                    ? 'text-success'
+                    : 'text-danger'
+            }>
                 {props.blocked}
             </th>
 
