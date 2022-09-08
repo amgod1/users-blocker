@@ -7,17 +7,20 @@ const LogInPanel = (props) => {
     const [logInLogin, setLogInLogin] = useState('')
     const [logInPass, setLogInPass] = useState('')
 
-    const onLoginIn = () => {
-        props.onLoginIn(logInLogin, logInPass)
-        props.onCheckLogin()
-        clearForms()
-    }
-
     const clearForms = () => {
         if (!!localStorage.login) {
             setLogInLogin('')
             setLogInPass('')
         }
+    }
+
+    const onLoginIn = () => {
+        props.onLoginIn(logInLogin, logInPass)
+        const timer = setTimeout(() => {
+            props.onCheckLogin()
+            clearForms()
+        }, 500)
+        return () => clearTimeout(timer);
     }
   
     let onLoginInChange = (e) => {
@@ -45,6 +48,14 @@ const LogInPanel = (props) => {
             type={el.type} 
         />
     )
+
+    if (!!props.userInfo) {
+        return (
+            <Alert variant={'success'} className='mt-5 h-100 text-center'>
+                Congratulations!!! You logged in your account!
+            </Alert>
+        )
+    }
 
     return (
         (props.isLogged)

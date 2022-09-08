@@ -10,6 +10,7 @@ const LogIn = (props) => {
           <LogInPanel
             onLoginIn = {props.onLoginIn}
             isLogged = {props.isLogged}
+            userInfo = {props.userInfo}
             onCheckLogin = {props.onCheckLogin}
           />
           <CreateAccountPanel 
