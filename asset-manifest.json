@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/users-blocker/static/css/main.c31b7143.css",
+    "main.js": "/users-blocker/static/js/main.222ae836.js",
+    "index.html": "/users-blocker/index.html",
+    "main.c31b7143.css.map": "/users-blocker/static/css/main.c31b7143.css.map",
+    "main.222ae836.js.map": "/users-blocker/static/js/main.222ae836.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c31b7143.css",
+    "static/js/main.222ae836.js"
+  ]
+}
